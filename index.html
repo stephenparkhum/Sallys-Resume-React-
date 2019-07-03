@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Sally's Resume</title>
+</head>
+
+<body>
+    <div id="application-root">
+
+    </div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script type="text/babel">
+
+
+
+        function App(props) {
+            console.log(props)
+            return (
+                <main>
+                    <section>
+                        <header>
+                        <h2>Employment</h2>
+                        </header>
+                        <h3>Company #1</h3>
+                        <ul>
+                        <li>Employed: 2010-2012</li>
+                        <li>Title: Senior Manager</li>
+                        <li>
+                            Description: Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Commodi suscipit repellendus omnis praesentium enim maiores
+                            exercitationem aliquid est porro saepe!
+                        </li>
+                        </ul>
+                        <h3>Company #2</h3>
+                        <ul>
+                        <li>Employed: 2007-2010</li>
+                        <li>Title: Assistant Manager</li>
+                        <li>
+                            Description: Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quibusdam commodi culpa perferendis vel aliquid deleniti fuga,
+                            voluptate id eveniet sed ipsum corporis ratione molestiae impedit
+                            iure facilis eos, quaerat distinctio?
+                        </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <header>
+                        <h2>Education</h2>
+                        </header>
+                        <h3>University of Ohio</h3>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iusto
+                        dolorum illo ipsa praesentium aliquid?
+                        </p>
+                        <ul>
+                        <li>Attended: 2019-2021</li>
+                        <li>Major: Music Engineering</li>
+                        <li>GPA: 4.1</li>
+                        </ul>
+                        <h3>Community College #1</h3>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+                        dignissimos?
+                        </p>
+                        <ul>
+                        <li>Attended: 2010-2019</li>
+                        <li>Major: Music Engineering</li>
+                        <li>GPA: 4.1</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <header>
+                        <h2>Contact</h2>
+                        </header>
+                        <address>
+                        <p>{props.studentName}</p>
+                        <p>Email: <a href="mailto:123abc@gmail.com">123abc@gmail.com</a></p>
+                        <p>Phone: <a href="tel:+15551231234">1 (555) 123-1234</a></p>
+                        </address>
+                        <img
+                        src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"
+                        alt="Sally Student Photo" className="sally-photo"
+                        />
+                    </section>
+                </main>
+            )
+        };
+    
+        ReactDOM.render(
+            <App 
+                studentName='Sally Student'
+            />,
+            document.querySelector('#application-root')
+
+        );
+    </script>
+</body>
+
+</html>
